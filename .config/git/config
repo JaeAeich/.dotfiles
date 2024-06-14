@@ -1,0 +1,40 @@
+[user]
+    name = Javed Habib
+    email = jh4official@gmail.com
+    signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOqY9eXpbg7Dj/qZyeuEaUN2X5hCjty9Xlfi/4HIrtmK jh4official@gmail.com"
+
+[commit]
+    gpgSign = true
+
+[core]
+    autocrlf = input  # keep newlines as in input
+    compression = 9  # trade cpu for network
+    fsync = none
+    whitespace = error  # threat incorrect whitespace as errors
+
+[blame]
+    coloring = highlightRecent
+    date = relative
+
+[init]
+    defaultBranch = main
+
+[log]
+    abbrevCommit = true  # short commits
+    date = relative
+    graphColors = blue,yellow,cyan,magenta,green,red
+
+[status]
+    branch = true
+    short = true
+    showStash = true
+    showUntrackedFiles = all
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+
+[alias]
+  l = log --relative-date --graph --abbrev-commit -10
+
+[format]
+  pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
